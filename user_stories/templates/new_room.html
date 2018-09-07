@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block header %}
+ <h1>Dodaj nową salę</h1>
+ {% endblock %}
+
+
+{% block content %}
+<form action="", method="POST">
+    {% csrf_token %}
+    <label> Nazwa sali:
+        <input type="text"
+               name="name">
+    </label><br>
+    <label> Pojemność:
+        <input type="number"
+               name="capacity">
+    </label><br>
+    <label> Czy sala posiada projektor?
+        <input type="checkbox"
+               name="projector">
+    </label>
+    <label>
+        <input type="submit" value="Dodaj">
+    </label>
+</form>
+{% endblock %}
