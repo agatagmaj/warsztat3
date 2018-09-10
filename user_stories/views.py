@@ -23,3 +23,9 @@ class NewRoom(View):
 
 
 
+class Rooms(View):
+    def get(self, request):
+        rooms = Room.objects.all()
+        return render(request, "rooms.html", locals())
+
+                      # {"rooms": rooms})

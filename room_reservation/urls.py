@@ -23,6 +23,6 @@ urlpatterns = [
     # re_path(r'^room/modify/(?P<id>(\d)+)$', ),
     # re_path(r'^room/delete/(?P<id>(\d)+)$', ),
     # re_path(r'^room/(?P<id>(\d)+)$', ),
-    # path('/', ),
+    path('', Rooms.as_view() ),
 
 ]

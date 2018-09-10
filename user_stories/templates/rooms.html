@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+ <h1>Lista sal</h1>
+ {% endblock %}
+
+
+{% block content %}
+<table><tr><th>Nazwa</th><th>Pojemność</th><th>Czy posiada projektor?</th></tr>
+{% for r in rooms %}
+     <tr>
+      <td>{{r.name}}</td>
+         <td><div>{{r.capacity}}</div></td>
+      <td>{{r.projector}}</td>
+      <td><a href= "room/modify/{t.id}">edytuj salę</a></td>
+     </tr>
+        <style>
+    table {
+        text-align: center;}
+    </style>
+{% endfor %}
+</table>
+{% endblock %}
